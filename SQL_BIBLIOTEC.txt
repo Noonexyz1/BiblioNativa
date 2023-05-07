@@ -1,0 +1,9 @@
+CREATE TABLE libros (
+	id INT(11) AUTO_INCREMENT PRIMARY KEY,
+	isbn varchar(20),
+	titulo varchar(50),
+	categoria varchar(20)
+);
+INSERT INTO libros (isbn,titulo,categoria) VALUES ('1001','Las mil y una noches','Drama');
+INSERT INTO libros (isbn,titulo,categoria) VALUES ('1002','El principito','Cuento');
+INSERT INTO libros (isbn,titulo,categoria) VALUES ('1003','Don Quijote de la Mancha','Novela');
