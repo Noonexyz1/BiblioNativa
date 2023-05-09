@@ -1,3 +1,4 @@
 com\emergentes\modelo\Libro.class
+.netbeans_automatic_build
 com\emergentes\controlador\MainController.class
 com\emergentes\utiles\ConexionBD.class

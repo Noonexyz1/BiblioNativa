@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.emergentes.modelo.Libro"%>
 <%
@@ -11,8 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
         <h1>Listado de Libros</h1>
-        <p><a href="MainController?op=nuevo"></a></p>
+        <p><a href="MainController?op=nuevo">Nuevo</a></p>
         <table border="1">
             <tr>
                 <th>Id</th>

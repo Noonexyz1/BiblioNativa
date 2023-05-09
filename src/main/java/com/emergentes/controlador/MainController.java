@@ -34,18 +34,21 @@ public class MainController extends HttpServlet {
             ResultSet rs;
 
             if (op.equals("list")) {
-                String sql = "SELECT * FROM LIBROS";
+                String sql = "select * from libros";
                 ps = conn.prepareStatement(sql);
                 rs = ps.executeQuery();
 
                 while (rs.next()) {
                     Libro lib = new Libro();
+                    
+                    
                     lib.setId(rs.getInt("id"));
                     lib.setIsbn(rs.getString("isbn"));
                     lib.setTitulo(rs.getString("titulo"));
                     lib.setCategoria(rs.getString("categoria"));
 
                     listaDeLibros.add(lib);
+                    
                 }
 
                 request.setAttribute("lista", listaDeLibros);
@@ -61,7 +64,8 @@ public class MainController extends HttpServlet {
 
             if (op.equals("eliminar")) {
                 int id = Integer.parseInt(request.getParameter("id"));
-                String sql = "DELETE FROM LIBROS WHERE ID = ?";
+                //String sql = "DELETE FROM LIBROS WHERE ID = ?";
+                String sql = "delete from libros where id = ?";
                 ps = conn.prepareStatement(sql);
                 ps.setInt(1, id);
 
