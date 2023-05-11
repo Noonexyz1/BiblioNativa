@@ -10,7 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        
+        
+        
+        
     </head>
+    
+    
+    
     <body>
         
         <h1>Listado de Libros</h1>
@@ -34,7 +41,7 @@
                         <a href="MainController?op=eliminar&id=${item.id}" onclick="return(confirm('Estas seguro de eliminar??'))">Eliminar</a>
                     </td>
                     <td>
-                        <a href="MainController?op=eliminar&id=${item.id}" onclick="return(confirm('Estas seguro de eliminar??'))">Editar</a>
+                        <a href="MainController?op=eliminar&id=${item.id}">Editar</a>
                     </td>
                 </tr>
             </c:forEach>
